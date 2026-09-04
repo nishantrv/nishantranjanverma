@@ -73,6 +73,28 @@
 .skill-list li.lvl-2::before { background: linear-gradient(90deg, #ffbd39 50%, transparent 50%); }
 .skill-list.plain li::before { display: none; }
 .skill-list.plain li { color: #d0d0d0; white-space: normal; }
+
+/* grouped skills below About Me */
+.skills-detail .skill-grp { margin-top: 0; }
+.skills-detail .skill-list { margin-bottom: 26px; }
+.skills-detail .skill-list li { color: #6c6c6c; }
+.skills-detail .skill-list li.lvl-3 { color: #2c2c2c; }
+.skills-detail .skill-list.plain li { color: #6c6c6c; }
+.skills-detail .skill-key { color: #8a8a8a; }
+
+/* writing section */
+.article-entry {
+  background: #fff; border: 1px solid #eaeaea; border-radius: 4px;
+  padding: 28px 26px; height: 100%;
+}
+.article-tag {
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: #ffbd39;
+}
+.article-entry h3 { font-size: 20px; line-height: 1.4; margin: 10px 0 12px; }
+.article-entry h3 a { color: #2c2c2c; }
+.article-entry h3 a:hover { color: #ffbd39; }
+.article-entry p { font-size: 15px; color: #6c6c6c; margin-bottom: 20px; }
 .lvl { display: inline-block; width: 9px; height: 9px; border: 1.5px solid #ffbd39; vertical-align: -1px; margin-right: 4px; }
 .lvl-3.lvl { background: #ffbd39; }
 .lvl-2.lvl { background: linear-gradient(90deg, #ffbd39 50%, transparent 50%); }
@@ -151,6 +173,7 @@
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#writing-section" class="nav-link"><span>Writing</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -217,7 +240,8 @@
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p><a href="https://www.linkedin.com/in/nishant-ranjan-verma-6945648a/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/nishantrv" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+							<a href="https://github.com/nishantrv" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a>
+							<a href="https://nishantranjanverma.medium.com/" class="btn btn-white btn-outline-white py-3 px-4">Medium</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -253,75 +277,93 @@
 									</div>
 								  </div>
 
-							<div class="skill-mf">
-								<p class="title-s">Skills</p>
-								<p class="skill-key">
-									<span class="lvl lvl-3"></span> Build with it constantly &nbsp;
-									<span class="lvl lvl-2"></span> Shipped to production &nbsp;
-									<span class="lvl lvl-1"></span> Working knowledge
-								</p>
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
 
-								<p class="skill-grp">Agentic Systems</p>
-								<ul class="skill-list">
-									<li class="lvl-3">LangGraph</li><li class="lvl-3">LangChain</li>
-									<li class="lvl-3">Supervisor &amp; Router</li><li class="lvl-3">Tool Calling</li>
-									<li class="lvl-2">Human-in-the-Loop</li><li class="lvl-2">State Checkpointing</li>
-									<li class="lvl-2">Guardrails</li>
-								</ul>
+									<span>Agentic AI</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">Retrieval &amp; RAG</p>
-								<ul class="skill-list">
-									<li class="lvl-3">pgvector</li><li class="lvl-3">Chunking Strategy</li>
-									<li class="lvl-2">Hybrid Search</li><li class="lvl-2">Rerankers</li>
-									<li class="lvl-2">FAISS</li><li class="lvl-1">Qdrant</li><li class="lvl-1">Ragas</li>
-								</ul>
+									<span>Gen AI &amp; LLMs</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">MCP</p>
-								<ul class="skill-list">
-									<li class="lvl-2">MCP Servers</li><li class="lvl-2">MCP Clients</li>
-									<li class="lvl-2">Tool &amp; Resource Design</li><li class="lvl-1">Scoped Auth</li>
-								</ul>
+									<span>RAG &amp; Vector Search</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">LLMOps</p>
-								<ul class="skill-list">
-									<li class="lvl-3">LangSmith</li><li class="lvl-2">Eval Harnesses</li>
-									<li class="lvl-2">Prompt Versioning</li><li class="lvl-2">Cost &amp; Token Budgets</li>
-									<li class="lvl-2">Drift Monitoring</li><li class="lvl-1">Langfuse</li>
-								</ul>
+									<span>MCP, Guardrails &amp; AI Security</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">Platform &amp; Cloud</p>
-								<ul class="skill-list">
-									<li class="lvl-3">Python</li><li class="lvl-3">FastAPI</li><li class="lvl-3">Azure AKS</li>
-									<li class="lvl-2">Docker</li><li class="lvl-2">Kubernetes</li><li class="lvl-2">GitHub Actions</li>
-									<li class="lvl-2">Postgres</li><li class="lvl-2">Redis</li>
-									<li class="lvl-2">AWS</li><li class="lvl-2">GCP</li>
-								</ul>
+									<span>MLOps &amp; LLMOps</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">Classical ML &amp; Deep Learning</p>
-								<ul class="skill-list">
-									<li class="lvl-2">scikit-learn</li><li class="lvl-2">XGBoost</li>
-									<li class="lvl-2">PyTorch</li><li class="lvl-2">TensorFlow</li>
-									<li class="lvl-2">CNNs</li><li class="lvl-2">Transformers</li>
-									<li class="lvl-2">NLP</li><li class="lvl-2">Forecasting</li>
-									<li class="lvl-2">MLflow</li><li class="lvl-2">DVC</li>
-								</ul>
+									<span>Model Evaluation &amp; Testing</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">Data Engineering &amp; Analysis</p>
-								<ul class="skill-list">
-									<li class="lvl-3">SQL</li><li class="lvl-3">Pandas</li><li class="lvl-3">ETL / ELT</li>
-									<li class="lvl-2">Airflow</li><li class="lvl-2">PySpark</li><li class="lvl-2">Data Modelling</li>
-									<li class="lvl-2">Tableau</li><li class="lvl-2">Power BI</li>
-									<li class="lvl-2">Adobe Analytics</li><li class="lvl-1">BigQuery</li><li class="lvl-1">dbt</li>
-								</ul>
+									<span>CI/CD &amp; Deployment</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
 
-								<p class="skill-grp">How I Work</p>
-								<ul class="skill-list plain">
-									<li>Stakeholder Management</li><li>Cross-functional Leadership</li>
-									<li>Technical Mentoring</li><li>Client Consulting</li>
-									<li>Requirements Gathering</li><li>Technical Writing</li>
-									<li>Agile Delivery</li><li>Team Leadership</li>
-								</ul>
-							</div>
+									<span>System Design &amp; Architecture</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Deep Learning &amp; Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Python &amp; SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Cloud Platforms (AWS, GCP)</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Science</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Analysis &amp; Visualization</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Engineering (ETL, ELT)</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -333,23 +375,24 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p> Senior AI & ML Engineer with 8+ years of experience building and deploying
-									production AI systems at Google, Adobe, Wayfair, and Virgin Media. I specialise in
-									Agentic AI, RAG systems, LLM orchestration (LangChain/LangGraph), and full MLOps pipelines
-									— from model training through CI/CD to cloud deployment on AWS and GCP.
-									MSc in AI (Distinction) with a research background in hybrid deep learning architectures.
-									</p>
+								<p>Senior AI &amp; ML Engineer with 8+ years building and running production AI systems &mdash;
+									most recently at Solventum (3M Healthcare), and before that Virgin Media, Wayfair,
+									Adobe and Google.</p>
+
+								<p>These days I work on the part of an LLM product that isn't the prompt: multi-agent
+									graphs in LangGraph, retrieval pipelines that can show their sources, MCP integrations,
+									and the evaluation, tracing and cost controls that decide whether a feature survives
+									contact with real users. Underneath that sits eight years of classical ML and data
+									engineering &mdash; recommendation and forecasting models, MLOps pipelines, and the
+									warehouse work that has to exist before any of it is possible.</p>
+
+								<p>MSc in AI and Big Data Analytics (Distinction), with research in hybrid deep learning
+									architectures.</p>
+
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span> Generative AI, Machine Learning, Data Science, MLOps &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, Telecommunication, Supply Chain, Finance, Customer Service &amp; Compliance</span></li>
-									<li class="d-flex"><span>Education:</span> <span>MSc. In AI &amp;  Bachelor of Engineering in CSE</span></li>
-									<li class="d-flex"><span>GenAI & LLMs :</span> <span>ChatGPT,Gemini,Claude, LangChain, LangGraph, LangSmith, LLamaIndex, FAISS, ChromaDB, HuggingFace, Pinecone &amp; DSA  </span></li>
-									<li class="d-flex"><span>MLOps & LLMOps :</span> <span> DVC, Kubernetes, Docker, MLFlow, BentoML, Github Actions, Prometheus, Grafana, Git, WhyLabs, FastAPI </span></li>
-									<li class="d-flex"><span>Algorithms :</span> <span>Supervised ML, Unsupervised ML, Reinforcement Learning, ANN, RNN, CNN,TensorFlow, PyTorch &amp; DSA  </span></li>
-									<li class="d-flex"><span>Data Skills:</span> <span>Data Mining, Data Wrangling, Data Warehousing, Data Modelling, Statistical Modelling, A/B Testing,
-									  &amp; Adv. Data Analysis</span></li>
-									<li class="d-flex"><span>Cloud & Other Skills:</span> <span>GCP(Vertex AI,AutoML, BigQuery, Looker), AWS(SageMaker,Bedrock,CloudWatch), PySpark, Excel, Looker, Power BI, Tableau, JIRA, Confluence, Adobe Analytics &amp; Salesforce</span></li>		
-									<li class="d-flex"><span>Soft Skills:</span> <span>Problem Solving, Stakeholder Mgmt, Project Mgmt, Cross Functional &amp; Collaboration </span></li>
+									<li class="d-flex"><span>Focus:</span> <span>Agentic AI, RAG &amp; Retrieval, LLMOps, MLOps &amp; Data Engineering</span></li>
+									<li class="d-flex"><span>Domains:</span> <span>Healthcare, Telecommunications, E-commerce &amp; Retail, Supply Chain, Finance, Customer Service &amp; Compliance</span></li>
+									<li class="d-flex"><span>Education:</span> <span>MSc. Artificial Intelligence &amp; Big Data Analytics (Distinction) &nbsp;&middot;&nbsp; B.E. Computer Science &amp; Engineering</span></li>
 								</ul>
 							</div>
 						</div>
@@ -364,6 +407,156 @@
 								<p><a href="https://www.linkedin.com/in/nishant-ranjan-verma-6945648a/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
 						</div> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="row skills-detail pt-5 pb-5">
+				<div class="col-md-12 heading-section ftco-animate mb-4">
+					<h2 class="mb-3">Skills</h2>
+					<p class="skill-key">
+						<span class="lvl lvl-3"></span> Build with it constantly &nbsp;
+						<span class="lvl lvl-2"></span> Shipped to production &nbsp;
+						<span class="lvl lvl-1"></span> Working knowledge
+					</p>
+				</div>
+				<div class="col-md-12">
+					<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Agentic Systems</p>
+						<ul class="skill-list">
+							<li class="lvl-3">LangGraph</li>
+							<li class="lvl-3">LangChain</li>
+							<li class="lvl-3">Supervisor &amp; Router</li>
+							<li class="lvl-3">Tool Calling</li>
+							<li class="lvl-2">Human-in-the-Loop</li>
+							<li class="lvl-2">State Checkpointing</li>
+							<li class="lvl-2">Guardrails</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Models &amp; LLMs</p>
+						<ul class="skill-list">
+							<li class="lvl-3">Claude</li>
+							<li class="lvl-3">GPT</li>
+							<li class="lvl-3">Gemini</li>
+							<li class="lvl-3">Prompt Engineering</li>
+							<li class="lvl-2">HuggingFace</li>
+							<li class="lvl-2">Groq</li>
+							<li class="lvl-1">Fine-tuning</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Retrieval &amp; RAG</p>
+						<ul class="skill-list">
+							<li class="lvl-3">pgvector</li>
+							<li class="lvl-3">Chunking Strategy</li>
+							<li class="lvl-2">Hybrid Search</li>
+							<li class="lvl-2">Rerankers</li>
+							<li class="lvl-2">FAISS</li>
+							<li class="lvl-2">ChromaDB</li>
+							<li class="lvl-2">LlamaIndex</li>
+							<li class="lvl-1">Pinecone</li>
+							<li class="lvl-1">Qdrant</li>
+							<li class="lvl-1">Ragas</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">MCP</p>
+						<ul class="skill-list">
+							<li class="lvl-2">MCP Servers</li>
+							<li class="lvl-2">MCP Clients</li>
+							<li class="lvl-2">Tool &amp; Resource Design</li>
+							<li class="lvl-1">Scoped Auth</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">LLMOps &amp; MLOps</p>
+						<ul class="skill-list">
+							<li class="lvl-3">LangSmith</li>
+							<li class="lvl-2">MLflow</li>
+							<li class="lvl-2">DVC</li>
+							<li class="lvl-2">Eval Harnesses</li>
+							<li class="lvl-2">Prompt Versioning</li>
+							<li class="lvl-2">Cost &amp; Token Budgets</li>
+							<li class="lvl-2">Drift Monitoring</li>
+							<li class="lvl-2">Prometheus</li>
+							<li class="lvl-2">Grafana</li>
+							<li class="lvl-1">BentoML</li>
+							<li class="lvl-1">WhyLabs</li>
+							<li class="lvl-1">Langfuse</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Platform &amp; Cloud</p>
+						<ul class="skill-list">
+							<li class="lvl-3">Python</li>
+							<li class="lvl-3">FastAPI</li>
+							<li class="lvl-3">Docker</li>
+							<li class="lvl-3">Git</li>
+							<li class="lvl-3">Azure AKS</li>
+							<li class="lvl-2">Kubernetes</li>
+							<li class="lvl-2">GitHub Actions</li>
+							<li class="lvl-2">Vertex AI</li>
+							<li class="lvl-2">SageMaker</li>
+							<li class="lvl-2">Bedrock</li>
+							<li class="lvl-2">Postgres</li>
+							<li class="lvl-2">Redis</li>
+							<li class="lvl-1">CloudWatch</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Classical ML &amp; Deep Learning</p>
+						<ul class="skill-list">
+							<li class="lvl-2">scikit-learn</li>
+							<li class="lvl-2">XGBoost</li>
+							<li class="lvl-2">PyTorch</li>
+							<li class="lvl-2">TensorFlow</li>
+							<li class="lvl-2">ANN</li>
+							<li class="lvl-2">CNN</li>
+							<li class="lvl-2">RNN</li>
+							<li class="lvl-2">Transformers</li>
+							<li class="lvl-2">NLP</li>
+							<li class="lvl-2">Forecasting</li>
+							<li class="lvl-1">Reinforcement Learning</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">Data Engineering &amp; Analysis</p>
+						<ul class="skill-list">
+							<li class="lvl-3">SQL</li>
+							<li class="lvl-3">Pandas</li>
+							<li class="lvl-3">ETL / ELT</li>
+							<li class="lvl-3">Excel</li>
+							<li class="lvl-2">Airflow</li>
+							<li class="lvl-2">PySpark</li>
+							<li class="lvl-2">BigQuery</li>
+							<li class="lvl-2">Data Modelling</li>
+							<li class="lvl-2">Data Warehousing</li>
+							<li class="lvl-2">Statistical Modelling</li>
+							<li class="lvl-2">A/B Testing</li>
+							<li class="lvl-2">Tableau</li>
+							<li class="lvl-2">Power BI</li>
+							<li class="lvl-2">Looker</li>
+							<li class="lvl-2">Adobe Analytics</li>
+							<li class="lvl-1">dbt</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<p class="skill-grp">How I Work</p>
+						<ul class="skill-list plain">
+							<li>Problem Solving</li>
+							<li>Stakeholder Management</li>
+							<li>Project Management</li>
+							<li>Cross-functional Leadership</li>
+							<li>Technical Mentoring</li>
+							<li>Client Consulting</li>
+							<li>Requirements Gathering</li>
+							<li>Technical Writing</li>
+							<li>Agile Delivery</li>
+							<li>Team Leadership</li>
+						</ul>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -398,11 +591,6 @@
 					<h2>Senior Data Scientist</h2>
 					<span class="position">Solventum (3M Healthcare), Ireland</span>
 					<p class="mt-4">Healthcare technology company spun out of 3M, serving clinical and hospital systems worldwide.
-						<ul>
-							<li>Built AI and data science solutions for clinical and healthcare workflows in a regulated environment</li>
-							<li>Applied LLM and retrieval techniques where every answer has to be traceable back to a source</li>
-							<li>Worked with clinical and product stakeholders to move models from prototype into production use</li>
-						</ul>
 					</p>
 				</div>
 
@@ -413,11 +601,6 @@
 					<h2>Lead AI & Data Engineer</h2>
 					<span class="position">Virgin Media, Ireland</span>
 					<p class="mt-4">Major Telecomm, Broadband and Media provider in UK and Ireland. 
-						<ul>
-							<li>Leading development of GenAI-powered internal tools and data pipelines serving 5M+ customers across UK and Ireland</li>
-							<li>Architecting Agentic AI systems with LangChain/LangGraph for automated customer service workflows</li>
-							<li>Building and maintaining MLOps infrastructure (Docker, Kubernetes, CI/CD) for model deployment at scale</li>
-						</ul>
 					</p>
 				</div>
 
@@ -428,11 +611,6 @@
 						<h2>Senior Machine Learning Engineer/MLOPs Engineer</h2>
 						<span class="position">Wayfair Ltd, Ireland</span>
 						<p class="mt-4">Wayfair Inc. is a multi-billion dollar American e-commerce company based in Boston that sells furniture and home goods online. 
-							<ul>
-								<li>Designed and deployed ML models for product recommendation, demand forecasting, and supply chain optimisation across $12B+ revenue platform</li>
-								<li>Built end-to-end MLOps pipelines (MLflow, DVC, Docker, GCP Vertex AI) reducing model deployment time from weeks to hours</li>
-								<li>Led A/B testing frameworks for ML model evaluation, directly impacting conversion rates and customer experience</li>
-							</ul>
 						</p>
 					</div>
 
@@ -444,10 +622,6 @@
 						<h2>Data Scientist, Ireland</h2>
 						<span class="position">Habitus Health, Ireland</span>
 						<p class="mt-4">Healthcare and Compliance startup with AI and IoT based solutions for B2B clients.  
-							<ul>
-								<li>Built predictive models for health compliance monitoring using IoT sensor data and ML classification</li>
-								<li>Developed data pipelines and dashboards for real-time B2B client reporting</li>
-							</ul>
 						</p>
 					</div>
 
@@ -459,10 +633,6 @@
 						<h2>Data Analyst & Consultant</h2>
 						<span class="position">Adobe Systems, India (On Contract)</span>
 						<p class="mt-4">Adobe Systems, is an American multinational computer software company specialized in wide array of application for enterprises.
-							<ul>
-								<li>Delivered data analytics solutions and consulting for 50+ Fortune 500 clients using Adobe Analytics and Tableau</li>
-								<li>Built ETL pipelines and automated reporting dashboards reducing manual analysis time by 60%</li>
-							</ul>
 						</p>
 					</div>
 
@@ -474,10 +644,6 @@
 						<h2>Analyst</h2>
 						<span class="position">Google, India (On Contract)</span>
 						<p class="mt-4">Google, multinational corporation and technology company focusing on online advertising, search engine, cloud, computer software and AI. 
-							<ul>
-								<li>Performed large-scale data analysis and quality assurance for Google's advertising and search products</li>
-								<li>Contributed to data-driven decision making using SQL, Python, and Google's internal analytics tools</li>
-							</ul>
 					        </p>
 					</div>
 
@@ -682,6 +848,45 @@
 			</div>
 		 </div>
 	  </div> -->
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt" id="writing-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-3">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Writing</h1>
+            <h2 class="mb-4">Writing</h2>
+            <p>Notes on what actually changes when models leave the notebook and meet real users.</p>
+          </div>
+        </div>
+
+        <div class="row">
+        	<div class="col-md-6 ftco-animate">
+        		<div class="article-entry">
+        			<span class="article-tag">MLOps &middot; 5 min read</span>
+        			<h3><a href="https://nishantranjanverma.medium.com/from-notebook-to-production-0ff5df6f4f5b" target="_blank" rel="noopener">From Notebook to Production: Shipping For Real</a></h3>
+        			<p>The model is rarely the hard part. What changes once real users depend on it &mdash; data contracts, evals, monitoring, cost ceilings, fallbacks and compliance &mdash; and why the estimate is usually three to five times the notebook.</p>
+        			<a href="https://nishantranjanverma.medium.com/from-notebook-to-production-0ff5df6f4f5b" target="_blank" rel="noopener" class="btn btn-primary py-2 px-4">Read on Medium</a>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6 ftco-animate">
+        		<div class="article-entry">
+        			<span class="article-tag">LLMOps</span>
+        			<h3><a href="https://nishantranjanverma.medium.com/mlops-vs-aiops-vs-llmops-vs-agentops-how-to-pick-the-right-ops-6a0afd7f9961" target="_blank" rel="noopener">MLOps vs AIOps vs LLMOps vs AgentOps: How to Pick the Right Ops</a></h3>
+        			<p>Four ops disciplines, four different problems, and the question teams keep asking the wrong way round. How to work out which one you actually need before buying tooling for all of them.</p>
+        			<a href="https://nishantranjanverma.medium.com/mlops-vs-aiops-vs-llmops-vs-agentops-how-to-pick-the-right-ops-6a0afd7f9961" target="_blank" rel="noopener" class="btn btn-primary py-2 px-4">Read on Medium</a>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="row justify-content-center pt-4">
+        	<div class="col-md-6 text-center ftco-animate">
+        		<p><a href="https://nishantranjanverma.medium.com/" target="_blank" rel="noopener" class="btn btn-white btn-outline-white py-3 px-4">All articles on Medium</a></p>
+        	</div>
+        </div>
+    	</div>
     </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
