@@ -105,17 +105,19 @@
 
 /* writing section */
 .article-entry {
-  background: #fff; border: 1px solid #eaeaea; border-radius: 4px;
-  padding: 28px 26px; height: 100%;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 4px; padding: 28px 26px; height: 100%;
+  transition: background .3s ease, border-color .3s ease;
 }
+.article-entry:hover { background: rgba(255,255,255,.08); border-color: rgba(255,189,57,.45); }
 .article-tag {
   font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
   color: #ffbd39;
 }
 .article-entry h3 { font-size: 20px; line-height: 1.4; margin: 10px 0 12px; }
-.article-entry h3 a { color: #2c2c2c; }
-.article-entry h3 a:hover { color: #ffbd39; }
-.article-entry p { font-size: 15px; color: #6c6c6c; margin-bottom: 20px; }
+.article-entry h3 a { color: #fff; }
+.article-entry h3 a:hover { color: #ffbd39; text-decoration: none; }
+.article-entry p { font-size: 15px; color: rgba(255,255,255,.6); margin-bottom: 20px; }
 .lvl { display: inline-block; width: 9px; height: 9px; border: 1.5px solid #ffbd39; vertical-align: -1px; margin-right: 4px; }
 .lvl-3.lvl { background: #ffbd39; }
 .lvl-2.lvl { background: linear-gradient(90deg, #ffbd39 50%, transparent 50%); }
