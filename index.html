@@ -84,6 +84,27 @@
 .focus-note { font-size: 12.5px; color: #8a8a8a; line-height: 1.6; margin: -4px 0 16px; }
 .lead-line { font-size: 19px; line-height: 1.55; color: #2c2c2c; font-weight: 500; margin-bottom: 20px; }
 
+/* tools & technologies — system stack */
+.tech-stack .stack-layer { display: grid; grid-template-columns: 260px 1fr; border: 1px solid #e9e9e9; border-bottom: none; }
+.tech-stack .stack-layer:last-of-type { border-bottom: 1px solid #e9e9e9; }
+.tech-stack .layer-tag { display: flex; gap: 14px; padding: 22px 20px; background: #f7f7f7; border-right: 1px solid #e9e9e9; }
+.tech-stack .layer-n { width: 26px; height: 26px; flex: none; border-radius: 50%; background: #ffbd39; color: #3a2c07; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.tech-stack .layer-tag h4 { font-size: 15px; font-weight: 600; margin: 2px 0; color: #2c2c2c; }
+.tech-stack .layer-tag p { font-size: 12.5px; color: #8a8a8a; margin: 0; line-height: 1.5; }
+.tech-stack .layer-body { padding: 22px 20px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+.tech-stack .tchip { display: inline-block; font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 3px; border: 1px solid #e9e9e9; background: #fff; color: #6c6c6c; white-space: nowrap; }
+.tech-stack .tchip.l3 { border-color: #ffbd39; background: #ffbd39; color: #3a2c07; font-weight: 600; }
+.tech-stack .tchip.l2 { border-color: #f3dda8; background: #fdf6e6; color: #7a6220; }
+.tech-stack .tchip.l1 { border-color: #e9e9e9; background: #fff; color: #9a9a9a; }
+.tech-stack .tchip.l0 { border-color: #e9e9e9; background: #f7f7f7; color: #6c6c6c; }
+.tech-stack .stack-foot { margin-top: 22px; padding: 20px; background: #f7f7f7; border: 1px solid #e9e9e9; }
+.tech-stack .stack-foot h4 { font-size: 14px; font-weight: 600; margin: 0 0 4px; color: #2c2c2c; }
+.tech-stack .stack-foot .layer-body { padding: 12px 0 0; }
+@media (max-width: 767px) {
+  .tech-stack .stack-layer { grid-template-columns: 1fr; }
+  .tech-stack .layer-tag { border-right: none; border-bottom: 1px solid #e9e9e9; }
+}
+
 /* writing section */
 .article-entry {
   background: #fff; border: 1px solid #eaeaea; border-radius: 4px;
@@ -189,7 +210,7 @@
 	          <!-- <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
 	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/A.jpg);"> -->
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/A.jpg); background-size: 90%; background-repeat: no-repeat;">
+						<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/B.jpg); background-size: cover; background-position: center 15%; background-repeat: no-repeat;">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -262,14 +283,6 @@
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
-									<div class="row">
-										<div class="col-12">
-											<div class="about-img">
-												<img src="images/B.jpg" class="img-fluid rounded b-shadow-a" alt="Nishant Ranjan Verma">
-											</div>
-										</div>
-									</div>
-
 								<div class="skill-mf">
 									<p class="title-s">Focus Areas</p>
 									<p class="focus-note">Where I spend my time. The tools behind each one are listed below.</p>
@@ -322,6 +335,14 @@
 											aria-valuemax="100"></div>
 									</div>
 								</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-12">
+											<div class="about-img">
+												<img src="images/B.jpg" class="img-fluid rounded b-shadow-a" alt="Nishant Ranjan Verma">
+											</div>
 							</div>
 						</div>
 					</div>
@@ -380,150 +401,156 @@
 			<div class="row skills-detail pt-5 pb-5">
 				<div class="col-md-12 heading-section ftco-animate mb-4">
 					<h2 class="mb-3">Tools &amp; Technologies</h2>
-					<p class="mb-3">The specific tools behind the focus areas, marked by how deep I actually go.</p>
+					<p class="mb-3">How I think about an AI system, layer by layer &mdash; and the tools I use at each one.</p>
 					<p class="skill-key">
 						<span class="lvl lvl-3"></span> Build with it constantly &nbsp;
 						<span class="lvl lvl-2"></span> Shipped to production &nbsp;
 						<span class="lvl lvl-1"></span> Working knowledge
 					</p>
 				</div>
-				<div class="col-md-12">
-					<div class="row">
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Agentic Systems</p>
-						<ul class="skill-list">
-							<li class="lvl-3">LangGraph</li>
-							<li class="lvl-3">LangChain</li>
-							<li class="lvl-3">Supervisor &amp; Router</li>
-							<li class="lvl-3">Tool Calling</li>
-							<li class="lvl-2">Human-in-the-Loop</li>
-							<li class="lvl-2">State Checkpointing</li>
-							<li class="lvl-2">Guardrails</li>
-						</ul>
+				<div class="col-md-12 tech-stack">
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">1</span>
+							<div><h4>Agent Layer</h4><p>Orchestration, tool use and the human checkpoints</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">LangGraph</span>
+							<span class="tchip l3">LangChain</span>
+							<span class="tchip l3">Supervisor &amp; Router</span>
+							<span class="tchip l3">Tool Calling</span>
+							<span class="tchip l2">Human-in-the-Loop</span>
+							<span class="tchip l2">State Checkpointing</span>
+							<span class="tchip l2">Guardrails</span>
+							<span class="tchip l2">MCP Servers</span>
+							<span class="tchip l2">MCP Clients</span>
+							<span class="tchip l2">Tool &amp; Resource Design</span>
+							<span class="tchip l1">Scoped Auth</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Models &amp; LLMs</p>
-						<ul class="skill-list">
-							<li class="lvl-3">Claude</li>
-							<li class="lvl-3">GPT</li>
-							<li class="lvl-3">Gemini</li>
-							<li class="lvl-3">Prompt Engineering</li>
-							<li class="lvl-2">HuggingFace</li>
-							<li class="lvl-2">Groq</li>
-							<li class="lvl-1">Fine-tuning</li>
-						</ul>
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">2</span>
+							<div><h4>Retrieval Layer</h4><p>Getting the right context in, and proving it was the right context</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">pgvector</span>
+							<span class="tchip l3">Chunking Strategy</span>
+							<span class="tchip l2">Hybrid Search</span>
+							<span class="tchip l2">Rerankers</span>
+							<span class="tchip l2">FAISS</span>
+							<span class="tchip l2">ChromaDB</span>
+							<span class="tchip l2">LlamaIndex</span>
+							<span class="tchip l1">Pinecone</span>
+							<span class="tchip l1">Qdrant</span>
+							<span class="tchip l1">Ragas</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Retrieval &amp; RAG</p>
-						<ul class="skill-list">
-							<li class="lvl-3">pgvector</li>
-							<li class="lvl-3">Chunking Strategy</li>
-							<li class="lvl-2">Hybrid Search</li>
-							<li class="lvl-2">Rerankers</li>
-							<li class="lvl-2">FAISS</li>
-							<li class="lvl-2">ChromaDB</li>
-							<li class="lvl-2">LlamaIndex</li>
-							<li class="lvl-1">Pinecone</li>
-							<li class="lvl-1">Qdrant</li>
-							<li class="lvl-1">Ragas</li>
-						</ul>
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">3</span>
+							<div><h4>Model Layer</h4><p>Language models, and the classical models underneath them</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">Claude</span>
+							<span class="tchip l3">GPT</span>
+							<span class="tchip l3">Gemini</span>
+							<span class="tchip l3">Prompt Engineering</span>
+							<span class="tchip l2">HuggingFace</span>
+							<span class="tchip l2">Groq</span>
+							<span class="tchip l1">Fine-tuning</span>
+							<span class="tchip l2">scikit-learn</span>
+							<span class="tchip l2">XGBoost</span>
+							<span class="tchip l2">PyTorch</span>
+							<span class="tchip l2">TensorFlow</span>
+							<span class="tchip l2">ANN</span>
+							<span class="tchip l2">CNN</span>
+							<span class="tchip l2">RNN</span>
+							<span class="tchip l2">Transformers</span>
+							<span class="tchip l2">NLP</span>
+							<span class="tchip l2">Forecasting</span>
+							<span class="tchip l1">Reinforcement Learning</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">MCP</p>
-						<ul class="skill-list">
-							<li class="lvl-2">MCP Servers</li>
-							<li class="lvl-2">MCP Clients</li>
-							<li class="lvl-2">Tool &amp; Resource Design</li>
-							<li class="lvl-1">Scoped Auth</li>
-						</ul>
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">4</span>
+							<div><h4>Ops Layer</h4><p>Traces, evals and cost ceilings, so nothing regresses quietly</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">LangSmith</span>
+							<span class="tchip l2">MLflow</span>
+							<span class="tchip l2">DVC</span>
+							<span class="tchip l2">Eval Harnesses</span>
+							<span class="tchip l2">Prompt Versioning</span>
+							<span class="tchip l2">Cost &amp; Token Budgets</span>
+							<span class="tchip l2">Drift Monitoring</span>
+							<span class="tchip l2">Prometheus</span>
+							<span class="tchip l2">Grafana</span>
+							<span class="tchip l1">BentoML</span>
+							<span class="tchip l1">WhyLabs</span>
+							<span class="tchip l1">Langfuse</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">LLMOps &amp; MLOps</p>
-						<ul class="skill-list">
-							<li class="lvl-3">LangSmith</li>
-							<li class="lvl-2">MLflow</li>
-							<li class="lvl-2">DVC</li>
-							<li class="lvl-2">Eval Harnesses</li>
-							<li class="lvl-2">Prompt Versioning</li>
-							<li class="lvl-2">Cost &amp; Token Budgets</li>
-							<li class="lvl-2">Drift Monitoring</li>
-							<li class="lvl-2">Prometheus</li>
-							<li class="lvl-2">Grafana</li>
-							<li class="lvl-1">BentoML</li>
-							<li class="lvl-1">WhyLabs</li>
-							<li class="lvl-1">Langfuse</li>
-						</ul>
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">5</span>
+							<div><h4>Platform Layer</h4><p>Where all of it actually runs</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">Python</span>
+							<span class="tchip l3">FastAPI</span>
+							<span class="tchip l3">Docker</span>
+							<span class="tchip l3">Git</span>
+							<span class="tchip l3">Azure AKS</span>
+							<span class="tchip l2">Kubernetes</span>
+							<span class="tchip l2">GitHub Actions</span>
+							<span class="tchip l2">Vertex AI</span>
+							<span class="tchip l2">SageMaker</span>
+							<span class="tchip l2">Bedrock</span>
+							<span class="tchip l2">Postgres</span>
+							<span class="tchip l2">Redis</span>
+							<span class="tchip l1">CloudWatch</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Platform &amp; Cloud</p>
-						<ul class="skill-list">
-							<li class="lvl-3">Python</li>
-							<li class="lvl-3">FastAPI</li>
-							<li class="lvl-3">Docker</li>
-							<li class="lvl-3">Git</li>
-							<li class="lvl-3">Azure AKS</li>
-							<li class="lvl-2">Kubernetes</li>
-							<li class="lvl-2">GitHub Actions</li>
-							<li class="lvl-2">Vertex AI</li>
-							<li class="lvl-2">SageMaker</li>
-							<li class="lvl-2">Bedrock</li>
-							<li class="lvl-2">Postgres</li>
-							<li class="lvl-2">Redis</li>
-							<li class="lvl-1">CloudWatch</li>
-						</ul>
+					<div class="stack-layer">
+						<div class="layer-tag">
+							<span class="layer-n">6</span>
+							<div><h4>Data Layer</h4><p>The foundation everything above depends on</p></div>
+						</div>
+						<div class="layer-body">
+							<span class="tchip l3">SQL</span>
+							<span class="tchip l3">Pandas</span>
+							<span class="tchip l3">ETL / ELT</span>
+							<span class="tchip l3">Excel</span>
+							<span class="tchip l2">Airflow</span>
+							<span class="tchip l2">PySpark</span>
+							<span class="tchip l2">BigQuery</span>
+							<span class="tchip l2">Data Modelling</span>
+							<span class="tchip l2">Data Warehousing</span>
+							<span class="tchip l2">Statistical Modelling</span>
+							<span class="tchip l2">A/B Testing</span>
+							<span class="tchip l2">Tableau</span>
+							<span class="tchip l2">Power BI</span>
+							<span class="tchip l2">Looker</span>
+							<span class="tchip l2">Adobe Analytics</span>
+							<span class="tchip l1">dbt</span>
+						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Classical ML &amp; Deep Learning</p>
-						<ul class="skill-list">
-							<li class="lvl-2">scikit-learn</li>
-							<li class="lvl-2">XGBoost</li>
-							<li class="lvl-2">PyTorch</li>
-							<li class="lvl-2">TensorFlow</li>
-							<li class="lvl-2">ANN</li>
-							<li class="lvl-2">CNN</li>
-							<li class="lvl-2">RNN</li>
-							<li class="lvl-2">Transformers</li>
-							<li class="lvl-2">NLP</li>
-							<li class="lvl-2">Forecasting</li>
-							<li class="lvl-1">Reinforcement Learning</li>
-						</ul>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">Data Engineering &amp; Analysis</p>
-						<ul class="skill-list">
-							<li class="lvl-3">SQL</li>
-							<li class="lvl-3">Pandas</li>
-							<li class="lvl-3">ETL / ELT</li>
-							<li class="lvl-3">Excel</li>
-							<li class="lvl-2">Airflow</li>
-							<li class="lvl-2">PySpark</li>
-							<li class="lvl-2">BigQuery</li>
-							<li class="lvl-2">Data Modelling</li>
-							<li class="lvl-2">Data Warehousing</li>
-							<li class="lvl-2">Statistical Modelling</li>
-							<li class="lvl-2">A/B Testing</li>
-							<li class="lvl-2">Tableau</li>
-							<li class="lvl-2">Power BI</li>
-							<li class="lvl-2">Looker</li>
-							<li class="lvl-2">Adobe Analytics</li>
-							<li class="lvl-1">dbt</li>
-						</ul>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<p class="skill-grp">How I Work</p>
-						<ul class="skill-list plain">
-							<li>Problem Solving</li>
-							<li>Stakeholder Management</li>
-							<li>Project Management</li>
-							<li>Cross-functional Leadership</li>
-							<li>Technical Mentoring</li>
-							<li>Client Consulting</li>
-							<li>Requirements Gathering</li>
-							<li>Technical Writing</li>
-							<li>Agile Delivery</li>
-							<li>Team Leadership</li>
-						</ul>
-					</div>
+					<div class="stack-foot">
+						<h4>Across every layer &mdash; how I work</h4>
+						<div class="layer-body">
+							<span class="tchip l0">Problem Solving</span>
+							<span class="tchip l0">Stakeholder Management</span>
+							<span class="tchip l0">Project Management</span>
+							<span class="tchip l0">Cross-functional Leadership</span>
+							<span class="tchip l0">Technical Mentoring</span>
+							<span class="tchip l0">Client Consulting</span>
+							<span class="tchip l0">Requirements Gathering</span>
+							<span class="tchip l0">Technical Writing</span>
+							<span class="tchip l0">Agile Delivery</span>
+							<span class="tchip l0">Team Leadership</span>
+						</div>
 					</div>
 				</div>
 			</div>
